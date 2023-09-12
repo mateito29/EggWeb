@@ -1,0 +1,255 @@
+@import url("https://fonts.googleapis.com/css2?family=Nova+Mono&display=swap");
+@font-face {
+  font-family: "Heavitas";
+  src: url(./fonts/Heavitas.ttf);
+}
+@font-face {
+  font-family: "varsity";
+  src: url(./fonts/varsity_regular.ttf);
+}
+* {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  height: auto;
+  background-color: rgb(44, 44, 44);
+  color: white;
+}
+
+body::-webkit-scrollbar{
+  width: 7px;
+  background-color: rgb(44, 44, 44);
+}
+body::-webkit-scrollbar-thumb{
+  background-color: rgb(76, 0, 255);
+  border-radius: 2rem;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.3rem 10%;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  z-index: 100;
+}
+
+.logo {
+  font-size: 2rem;
+  color: white;
+  font-family: "Heavitas";
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.navbar a {
+  font-size: 1rem;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-family: "Heavitas";
+  margin-left: 2.5rem;
+}
+
+.icons {
+  font-size: 2.5rem;
+  cursor: pointer;
+  display: none;
+}
+
+.section-principal {
+  background-image: url(./img/fondo.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-principal h2 {
+  padding-top: 2rem;
+  font-family: "Fira Code", monospace, "Montserrat", sans-serif;
+  text-align: center;
+}
+.img-container {
+  background: rgba(14, 14, 14, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(89, 0, 255, 0.37);
+  backdrop-filter: blur(13.5px);
+  -webkit-backdrop-filter: blur(13.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.18);
+  display: flex;
+  flex-direction: column;
+  padding: 100px;
+  border-radius: 30px;
+  z-index: 1;
+}
+.img-container img {
+  border-radius: 50%;
+  border: 4px solid rgb(76, 0, 255);
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.img-container h2 {
+  font-family: "Fira Code", monospace, "Montserrat", sans-serif;
+}
+
+.section-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-basis: 50%;
+  padding-left: 40px;
+}
+
+.title-container {
+  display: inline-block;
+  font-size: 4rem;
+  font-family: "Heavitas";
+}
+
+.info-container {
+  padding-bottom: 100px;
+  flex-basis: 50%;
+  margin-left: 300px;
+  padding-left: 20px;
+  font-family: Heavitas;
+}
+
+.info-container p {
+  font-size: 1.4rem;
+}
+
+.title-info {
+  font-size: 3rem;
+  margin-bottom: 30px;
+  margin-top: 50px;
+}
+
+.parraf-top {
+  margin-bottom: 20px;
+}
+
+.line-container {
+  display: flex;
+}
+
+.line-left {
+  border: 3px solid rgb(76, 0, 255);
+  width: 50vw;
+  border-radius: 20px;
+}
+
+.line-right {
+  border: 3px solid rgb(179, 179, 179);
+  width: 50vw;
+  border-radius: 20px;
+}
+
+.proyects-container {
+  padding-bottom: 100px;
+  flex-basis: 50%;
+  margin-left: 300px;
+  padding-left: 20px;
+  font-family: Heavitas;
+}
+
+.formulario-content {
+  background-color: rgb(76, 0, 255);
+  padding: 5rem;
+  border-radius: 3rem;
+  font-family: "Heavitas";
+  margin-top: 1rem;
+  margin-right: 1rem;
+}
+
+.formulario-content form {
+  display: flex;
+  flex-direction: column;
+}
+
+input,
+textarea {
+  background-color: rgb(44, 44, 44);
+  color: white;
+  border-radius: 1rem;
+  padding: 1rem;
+  font-weight: 600;
+  border: none;
+  box-shadow: 0 0 1rem rgb(44, 44, 44);
+  resize: none;
+}
+
+.button {
+  height: 50px;
+  width: 150px;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+  margin: 0 auto;
+}
+
+.button:hover {
+  box-shadow: .5px .5px 150px #252525;
+}
+
+.type1::after {
+  content: "Thanks";
+  height: 50px;
+  width: 150px;
+  background-color: rgb(44, 44, 44);
+  color: rgb(255, 255, 255);
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  transform: translateY(50px);
+  font-size: 1.2rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease-in-out;
+}
+
+.type1::before {
+  content: "Submit";
+  height: 50px;
+  width: 150px;
+  background-color: rgb(44, 44, 44);
+  color: #ffffff;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  transform: translateY(0px) scale(1.2);
+  font-size: 1.2rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease-in-out;
+}
+
+.type1:hover::after {
+  transform: translateY(0) scale(1.2);
+}
+
+.type1:hover::before {
+  transform: translateY(-50px) scale(0) rotate(120deg);
+}
